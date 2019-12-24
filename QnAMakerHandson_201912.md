@@ -43,7 +43,7 @@ Azure Portal から左端ナビゲーションバーから **[+リソースの�
 - サブスクリプション : (自動入力)
 - Pricing Tier : **F0** の無償版でOKです
 - 場所 : 米国西部
-- Resource Group : [(1)Azure Bot Service から LINE 接続 編](https://qiita.com/annie/items/f8c5964bce2d15c26253) と同じにしておくと分かりやすいかと思います
+- Resource Group : 見分けのつくお好みのところを。東日本(JapanEast) or 西日本(JapanWest) など
 - Search Pricing Tier :  **F** の無償版でOKです
 - Search location : 東日本
 - App name : 基本的には Name に入力したものが自動で入力されます。azurewebsites.net 内でユニークになる必要があるため、必要に応じて修整します
