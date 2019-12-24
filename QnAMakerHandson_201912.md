@@ -81,7 +81,7 @@ QnAMaker のポータルで Q&A 回答エンジンを作成していきます。
 *Step 4* でナレッジベースの元となる Q&A データを登録します。
 今回はこちらのデータソース(テキストファイル、タブ区切り＆UTF-8)を使います。(ローカルにダウンロードしてお使いください。)
 
-[データソース(テキストファイル)](https://github.com/a-n-n-i-e/Azure-LineBot/blob/master/WhatCatsCanEatBot/WhatCatsCanEat.txt)  
+[データソース(テキストファイル)](https://raw.githubusercontent.com/a-n-n-i-e/Azure-LineBot/master/WhatCatsCanEatBot/WhatCatsCanEat.txt)  
 
 > ※ こちらは以下の [ペトこと 様 Web サイト](https://petokoto.com/) で公開されている情報を編集したものです。今回のハンズオン手順を確認する範囲のみでご利用ください。(**このデータソース内容による、いかなるトラブル・損失・損害に対して責任を負いません。**)
         - [猫が食べて良いものまとめ　野菜・果物・穀物など主な栄養素や期待される効果](https://petokoto.com/1400)
