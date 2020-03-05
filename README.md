@@ -1,6 +1,6 @@
 # Azure DX ハンズオン(AI 編) - 2020 年 2 月版
 
-## 人工知能 API Microsoft Azure Cognitive Services を活用したアプリ開発ハンズオン
+## "人工知能 API" Microsoft Azure Cognitive Services を活用したアプリ開発ハンズオン
 
 "人工知能 API" [Microsoft Azure Cognitive Services](https://www.microsoft.com/cognitive-services/) は、ご自分で学習モデルを構築する手間を省き、画像や音声、テキストなどのさまざまな分析を行う AI エンジンをノーコーディングで利用できるサービスです。
 
