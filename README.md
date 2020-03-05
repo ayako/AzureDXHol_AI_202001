@@ -4,8 +4,8 @@
 
 "人工知能 API" [Microsoft Azure Cognitive Services](https://www.microsoft.com/cognitive-services/) は、ご自分で学習モデルを構築する手間を省き、画像や音声、テキストなどのさまざまな分析を行う AI エンジンをノーコーディングで利用できるサービスです。
 
-<img src="doc_images/AzureDXHandson_CognitiveServices01.png" width="600">
-<img src="doc_images/AzureDXHandson_CognitiveServices02.png" width="600">
+<img src="doc_images/AzureDXHandson_CognitiveServices01.png" width="400">
+<img src="doc_images/AzureDXHandson_CognitiveServices02.png" width="400">
 
 このハンズオンシリーズでは、Cognitive Services の代表的なサービスを活用して、アプリケーションとして利用するまでを体験できます。
 
