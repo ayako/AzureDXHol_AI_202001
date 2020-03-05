@@ -18,11 +18,12 @@ Web App から Azure Blob Storage に音声ファイルをアップロードし�
 
 0. [準備](#準備)
 1. Speech Services の機能を確認
-    - [Speech Services API](#speech-services-api)
-    - [Custom Speech API](#custom-speech-api)
+    - [1.1 Speech Services API](#1-1-speech-services-api)
+    - [1.2 Custom Speech API](#1-2-custom-speech-api)
 2. 音声ファイルをテキスト化するアプリの作成
-    - [Azure Function](#azure-function)
-    - [Azure App Service (Web App)](#azure-app-service)
+    - [Azure Storage (Blob, Table) の準備](#azure-storage-blob-table-の準備)
+    - [2.1 Azure Function](#2-1-azure-function)
+    - [2.2 Azure App Service (Web App)](#2-2-azure-app-service)
 
 
 ## 準備
@@ -239,11 +240,11 @@ Azure Storage の準備 と同じ手順で、作成した Azure Blob Storage に
 
 このソリューションには 3 つの関数が含まれています。
 
-- GetTranscriptionFunc.cs
+- [GetTranscriptionFunc.cs](https://github.com/ayako/CogServicesSpeechSamples_201907/blob/master/samples/SpeechToText/CSharp/BatchTranscription_202002/STTBatchFunc202002/GetTranscriptonFunc.cs)
     - wav コンテナーにアップロードされた音声ファイルを Speech Services の Translcription にジョブ投下、テキストファイルを取得して txt コンテナーに保存
-- CreateLogFunc.cs
+- [CreateLogFunc.cs](https://github.com/ayako/CogServicesSpeechSamples_201907/blob/master/samples/SpeechToText/CSharp/BatchTranscription_202002/STTBatchFunc202002/CreateLogFunc.cs)
     - wab コンテナーにアップロードされた音声ファイルを元に log テーブルにエントリーを作成
-- UpdateLogFunc.cs
+- [UpdateLogFunc.cs](https://github.com/ayako/CogServicesSpeechSamples_201907/blob/master/samples/SpeechToText/CSharp/BatchTranscription_202002/STTBatchFunc202002/UpdateLogFunc.cs)
     - txt コンテナーにアップロードされたテキストファイルを元に、log テーブルの該当エントリーを更新
 
 
