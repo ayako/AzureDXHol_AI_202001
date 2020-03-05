@@ -39,11 +39,11 @@ Web App から Azure Blob Storage に音声ファイルをアップロードし�
 - [Visual Studio 2019](https://visualstudio.microsoft.com/ja/downloads/) などの C# 開発ツール (Visual Studio 2019 Community など無償版で OK)
     - Azure 開発ワークロード を合わせてインストールしてください ([手順](https://docs.microsoft.com/ja-jp/azure/azure-functions/functions-create-your-first-function-visual-studio))
 
-- [CogServicesSpeechSamples_201907 - BatchTranscription_202002](https://github.com/ayako/CogServicesSpeechSamples_201907/tree/master/samples/SpeechToText/CSharp/BatchTranscription_202002) のディレクトリをローカルにダウンロードしておきます。このディレクトリだけを ZIP でダウンロード できます。
+- [CogServicesSpeechSamples_201907 - BatchTranscription_202002](https://github.com/ayako/CogServicesSpeechSamples_201907/tree/master/samples/SpeechToText/CSharp/BatchTranscription_202002) のディレクトリをローカルにダウンロードしておきます。このディレクトリだけを [ZIP でダウンロード できます](https://github.com/ayako/CogServicesSpeechSamples_201907/raw/master/samples/SpeechToText/CSharp/BatchTranscription_202002/BatchTranscription_202002.zip)。
 
 - サンプル音声ファイル(wav) をダウンロードしておきます
-    - https://github.com/ayako/AzureDXHol_AI_202001/raw/master/test_voice/ModernWorkMS(Ja)_short.wav
-    - https://github.com/ayako/AzureDXHol_AI_202001/raw/master/test_voice/ModernWorkMS(Ja)_long.wav
+    - [Short](https://github.com/ayako/AzureDXHol_AI_202001/raw/master/test_voice/ModernWorkMS(Ja)_short.wav)
+    - [Long](https://github.com/ayako/AzureDXHol_AI_202001/raw/master/test_voice/ModernWorkMS(Ja)_long.wav)
 
 ## 手順
 
