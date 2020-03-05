@@ -18,11 +18,12 @@ Web App から Azure Blob Storage に音声ファイルをアップロードし�
 
 0. [準備](#準備)
 1. Speech Services の機能を確認
-    - [Speech Services API](#speech-services-api)
-    - [Custom Speech API](#custom-speech-api)
+    - [1.1 Speech Services API](#1-1-speech-services-api)
+    - [1.2 Custom Speech API](#1-2-custom-speech-api)
 2. 音声ファイルをテキスト化するアプリの作成
-    - [Azure Function](#azure-function)
-    - [Azure App Service (Web App)](#azure-app-service)
+    - [Azure Storage (Blob, Table) の準備](#azure-storage-blob-table-の準備)
+    - [2.1 Azure Function](#2-1-azure-function)
+    - [2.2 Azure App Service (Web App)](#2-2-azure-app-service)
 
 
 ## 準備
@@ -38,8 +39,11 @@ Web App から Azure Blob Storage に音声ファイルをアップロードし�
 - [Visual Studio 2019](https://visualstudio.microsoft.com/ja/downloads/) などの C# 開発ツール (Visual Studio 2019 Community など無償版で OK)
     - Azure 開発ワークロード を合わせてインストールしてください ([手順](https://docs.microsoft.com/ja-jp/azure/azure-functions/functions-create-your-first-function-visual-studio))
 
-- [CogServicesSpeechSamples_201907 - BatchTranscription_202002](https://github.com/ayako/CogServicesSpeechSamples_201907/tree/master/samples/SpeechToText/CSharp/BatchTranscription_202002) のディレクトリをローカルにダウンロードしておきます。このディレクトリだけを ZIP でダウンロード できます。
+- [CogServicesSpeechSamples_201907 - BatchTranscription_202002](https://github.com/ayako/CogServicesSpeechSamples_201907/tree/master/samples/SpeechToText/CSharp/BatchTranscription_202002) のディレクトリをローカルにダウンロードしておきます。このディレクトリだけを [ZIP でダウンロード できます](https://github.com/ayako/CogServicesSpeechSamples_201907/raw/master/samples/SpeechToText/CSharp/BatchTranscription_202002/BatchTranscription_202002.zip)。
 
+- サンプル音声ファイル(wav) をダウンロードしておきます
+    - [Short](https://github.com/ayako/AzureDXHol_AI_202001/raw/master/test_voice/ModernWorkMS(Ja)_short.wav)
+    - [Long](https://github.com/ayako/AzureDXHol_AI_202001/raw/master/test_voice/ModernWorkMS(Ja)_long.wav)
 
 ## 手順
 
@@ -58,7 +62,7 @@ Ocp-Apim-Subscription-Key: YOUR_API_KEY
 
 <img src="doc_images/handson_BatchSTT_04.png" width="600">
 
-Body は **Binary** をクリックし、[test_voice のサンプル(short)](test_voice\ModernWorkMS(Ja)_short.wav)を選択します。
+Body は **Binary** をクリックし、[サンプル音声ファイル(short)](https://github.com/ayako/AzureDXHol_AI_202001/raw/master/test_voice/ModernWorkMS(Ja)_short.wav)を選択します。
 
 > Rest API では 音声ファイルは WAV または OGG 形式、16 ビット、16 kHz、モノラル(1 channel) である必要があります。([ドキュメント](https://docs.microsoft.com/ja-jp/azure/cognitive-services/speech-service/rest-speech-to-text#audio-formats))
 
@@ -117,7 +121,7 @@ Azure Portal で **[リソースの作成]** をクリックします。
 
 <img src="doc_images/handson_BatchSTT_15.png" width="600">
 
-ファイルは [test_voice のサンプル](test_voice\ModernWorkMS(Ja)_long.wav)を選択、**[アップロード]** をクリックして音声ファイルをアップロードします。
+ファイルは [サンプル音声ファイル(long)](https://github.com/ayako/AzureDXHol_AI_202001/raw/master/test_voice/ModernWorkMS(Ja)_long.wav)を選択、**[アップロード]** をクリックして音声ファイルをアップロードします。
 
 <img src="doc_images/handson_BatchSTT_16.png" width="600">
 
@@ -239,11 +243,11 @@ Azure Storage の準備 と同じ手順で、作成した Azure Blob Storage に
 
 このソリューションには 3 つの関数が含まれています。
 
-- GetTranscriptionFunc.cs
+- [GetTranscriptionFunc.cs](https://github.com/ayako/CogServicesSpeechSamples_201907/blob/master/samples/SpeechToText/CSharp/BatchTranscription_202002/STTBatchFunc202002/GetTranscriptonFunc.cs)
     - wav コンテナーにアップロードされた音声ファイルを Speech Services の Translcription にジョブ投下、テキストファイルを取得して txt コンテナーに保存
-- CreateLogFunc.cs
+- [CreateLogFunc.cs](https://github.com/ayako/CogServicesSpeechSamples_201907/blob/master/samples/SpeechToText/CSharp/BatchTranscription_202002/STTBatchFunc202002/CreateLogFunc.cs)
     - wab コンテナーにアップロードされた音声ファイルを元に log テーブルにエントリーを作成
-- UpdateLogFunc.cs
+- [UpdateLogFunc.cs](https://github.com/ayako/CogServicesSpeechSamples_201907/blob/master/samples/SpeechToText/CSharp/BatchTranscription_202002/STTBatchFunc202002/UpdateLogFunc.cs)
     - txt コンテナーにアップロードされたテキストファイルを元に、log テーブルの該当エントリーを更新
 
 
@@ -274,7 +278,7 @@ Visual Studio のツールバーから *▶* をクリック、または *F5* �
 <img src="doc_images/handson_BatchSTT_32.png" width="600">
 
 Azure Portal の Azure Storage ペイン で **Storage Explorer** を選択して開きます。
-Blob Storage に作成した *wav* コンテナーに [test_voice のサンプル(long)](test_voice\ModernWorkMS(Ja)_long.wav) をアップロードします。
+Blob Storage に作成した *wav* コンテナーに  [サンプル音声ファイル(long)](https://github.com/ayako/AzureDXHol_AI_202001/raw/master/test_voice/ModernWorkMS(Ja)_long.wav) をアップロードします。
 
 <img src="doc_images/handson_BatchSTT_33.png" width="600">
 
@@ -324,7 +328,7 @@ Azure Function の手順でアップロードした、音声ファイルおよ�
 
 **Web アプリを実行したまま**、Azure Function を再度デバッグ実行します。
 
-**[ファイルを選択]** をクリックして、[test_voice のサンプル(long)](test_voice\ModernWorkMS(Ja)_long.wav) を選択、**[送信]** をクリックして、音声ファイルを Azure Blob Storage にアップロードします。
+Web アプリ画面に戻り、**[ファイルを選択]** をクリックして、[サンプル音声ファイル(long)](https://github.com/ayako/AzureDXHol_AI_202001/raw/master/test_voice/ModernWorkMS(Ja)_long.wav) など、ダウンロードしたサンプルの音声ファイルを選択、**[送信]** をクリックして、音声ファイルを Azure Blob Storage にアップロードします。
 
 <img src="doc_images/handson_BatchSTT_39.png" width="600">
 
