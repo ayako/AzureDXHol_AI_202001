@@ -1,3 +1,5 @@
+# Microsoft Azure Cognitive Services & Applied AI Services の利用準備
+
 Microsoft Azure Cognitive Services および Applied AI Services は 画像、文章、言語、情報を処理する機能を API 経由で利用できるサービスです。
 Azure サブスクリプションをお持ちであれば、Free Tier(F0) と呼ばれる Cognitive Services | Applied AI Services の(当面)無料の料金プランを試用できます。
 
@@ -11,7 +13,7 @@ Azure サブスクリプションをお持ちであれば、Free Tier(F0) と呼
     - [Custom Vision](#Custom-Vision)
 - [Applied AI Services のサービスを作成する](#Applied-AI-Services-のサービスを作成する)
     - [Form Recognizer](#Form-Recognizer)
-        - [Azure Storage と Blob コンテナー、SAS URL の作成](#Azure-Storage-と-Blob-コンテナー、-SAS-URL-の作成)
+        - [Azure Storage と Blob コンテナー、SAS URL の作成](#Azure-Storage-と-Blob-コンテナー-SAS-URL-の作成)
 
 
 ## 準備
@@ -152,7 +154,7 @@ Form Recognizer の作成 画面でサービス作成に必要な情報を入力
 
 > 同一サブスクリプション、同一リージョンで F0 は一つまでしか作成できません。その場合は 価格レベルは **S0** を選択します。
 
-<img src="doc_images/handson_subscription_formRecognizer_03.png" width="600">
+<img src="doc_images/handson_subscription_formrecognizer_03.png" width="600">
 
 *認証に成功しました* というメッセージが表示されるのを確認して、**[作成]** をクリックしてサービスを作成します。
 
