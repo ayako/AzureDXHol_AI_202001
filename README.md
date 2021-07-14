@@ -8,8 +8,8 @@
 
 このハンズオンシリーズでは、Cognitive Services | Applied AI Services の代表的なサービスを活用して、アプリケーションとして利用するまでを体験できます。
 
-- [Microsoft Cognitive Services Face API を利用した 画像識別アプリ 開発 (Face API 感情＆マスク判定)](https://github.com/ayako/CogServicesVisionSamples/blob/master/FaceHandson_202107.md) : (C# | JavaScript)
-- [Microsoft Cognitive Services Custom Vision を利用した 画像識別アプリ 開発 (Custom Vision 犬種判定)](https://github.com/ayako/CogServicesVisionSamples/blob/master/CustomVisionHandson_dog_202107.md) : (C# | JavaScript)
+- [Microsoft Cognitive Services を利用した 画像識別アプリ 開発 (Face API 感情＆マスク判定)](https://github.com/ayako/CogServicesVisionSamples/blob/master/FaceHandson_202107.md) : (C# | JavaScript)
+- [Microsoft Cognitive Services を利用した 画像識別アプリ 開発 (Custom Vision 犬種判定)](https://github.com/ayako/CogServicesVisionSamples/blob/master/CustomVisionHandson_dog_202107.md) : (C# | JavaScript)
 - [Microsoft Applied AI Services を利用した フォーム読み取りアプリ 開発 (Form Recognizer)](https://github.com/ayako/CogServicesVisionSamples/blob/master/FormRecognizerHandson_202107.md)
 
 
